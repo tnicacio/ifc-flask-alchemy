@@ -21,4 +21,4 @@ class Person(db.Model):
         }
 
     def __str__(self):
-        s = f'Person:{ id: {self.id}, name: {self.name}, cpf: {self.cpf} }'
+        return f'Person:[ id: {self.id}, name: {self.name}, cpf: {self.cpf} ]'

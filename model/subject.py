@@ -22,3 +22,6 @@ class Subject(db.Model):
             'workload': self.workload,
             'syllabus': self.syllabus,
         }
+
+    def __str__(self):
+        return f'Subject:[ id: {self.id}, name: {self.name}, workload: {self.workload}, syllabus: {self.syllabus} ]'
