@@ -1,18 +1,18 @@
-# How to create and initialize a virtual environment
+# Python - Flask - SqlAlchemy
 
-https://docs.python.org/3/library/venv.html
-https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
+> Backend implementado em Python para a disciplina de Desenvolvimento de Sistemas em Python_ do IFC Campus Blumenau.
 
-python -m venv env
+## Diagrama de classes
 
-to activate:
 
-env\Scripts\activate
+## Para testar
 
-to deactivate:
+### Instalar as dependências
+```python -m pip install -r requirements.txt```
 
-env\Scripts\deactivate
+### Iniciar o servidor
+Rodar o arquivo _servidor.py_ utilizando a sua IDE de preferência, ou através do comando:
 
-# Install dependencies:
+```python server.py```
 
-python -m pip install -r requirements.txt
+Após isso, o backend irá rodar na porta 5000.
