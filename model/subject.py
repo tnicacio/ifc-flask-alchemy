@@ -12,8 +12,8 @@ class Subject(db.Model):
     workload = db.Column(db.Integer)
     # Ementa
     syllabus = db.Column(db.String(3200))
-    # Pai no relacionamento One-To-One com a classe Student
-    student = db.relationship("Student", back_populates="subject", uselist=False)
+    # Pai no relacionamento One-To-Many com a entidade Student
+    students = db.relationship("Student", back_populates="subject", cascade="all, delete-orphan")
 
     def to_json(self):
         return {
@@ -21,6 +21,7 @@ class Subject(db.Model):
             'name': self.name,
             'workload': self.workload,
             'syllabus': self.syllabus,
+            'students': [student.to_json() for student in self.students]
         }
 
     def __str__(self):

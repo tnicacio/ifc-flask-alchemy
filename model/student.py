@@ -2,6 +2,7 @@ from config import db
 from model.person import Person
 from model.subject import Subject
 
+
 # Estudante da disciplina
 class Student(db.Model):
     __tablename__ = 'student'
@@ -17,11 +18,11 @@ class Student(db.Model):
     person_id = db.Column(db.Integer, db.ForeignKey(Person.id), nullable=False)
     # Disciplina
     subject_id = db.Column(db.Integer, db.ForeignKey(Subject.id), nullable=False)
-    # Filho no relacionamento One-To-One com a classe Person
-    # https://docs.sqlalchemy.org/en/14/orm/basic_relationships.html#one-to-one
-    person = db.relationship("Person", back_populates="student")
-    # Filho no relacionamento One-To-One com a classe Subject
-    subject = db.relationship("Subject", back_populates="student")
+    # Filho no relacionamento Many-To-One com a entidade Person
+    # https://docs.sqlalchemy.org/en/14/orm/basic_relationships.html#many-to-one
+    person = db.relationship("Person", back_populates="students")
+    # Filho no relacionamento Many-To-One com a entidade Subject
+    subject = db.relationship("Subject", back_populates="students")
 
     def to_json(self):
         return {
@@ -62,13 +63,9 @@ if __name__ == "__main__":
     student2 = Student(semester=4, final_score=9.5, frequency=90.1, person_id=2, subject_id=1)
     student3 = Student(semester=4, final_score=8.3, frequency=75.8, person_id=2, subject_id=2)
 
-    db.session.add(person1)
-    db.session.add(person2)
-    db.session.add(subject1)
-    db.session.add(subject2)
-    db.session.add(student1)
-    db.session.add(student2)
-    db.session.add(student3)
+    db.session.add_all([person1, person2])
+    db.session.add_all([subject1, subject2])
+    db.session.add_all([student1, student2, student3])
     db.session.commit()
 
     print(person1)
