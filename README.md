@@ -1,6 +1,6 @@
 # Python - Flask - SqlAlchemy
 
-> Backend implementado em Python para a disciplina de Desenvolvimento de Sistemas em Python_ do IFC Campus Blumenau.
+> Backend implementado em Python para a disciplina de _Desenvolvimento de Sistemas em Python_ do IFC Campus Blumenau.
 
 ## Diagrama de classes
 As classes modeladas foram: **Pessoa**(nome, cpf, email), **Disciplina**(nome, carga horária, ementa) e **EstudanteDaDisciplina**(semestre, pessoa, disciplina, mediaFinal, frequencia).
