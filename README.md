@@ -26,75 +26,75 @@ Após isso, o backend irá rodar na porta 5000.
 ### :standing_person: Persons (Pessoas)
 
 #### [GET] /persons
-Para ver a lista de pessoas cadastradas
-
-Aceita filtro pelo campo 'name'. Exemplo:
-```[POST] http://localhost:5000/persons?name=jo```
-irá realizar uma busca por pessoas que possuam 'jo' em seus nomes, ignorando se o texto é maiúsculo ou minúsculo
+> Para ver a lista de pessoas cadastradas
+> 
+> Aceita filtro pelo campo 'name'. Exemplo:
+> ```[POST] http://localhost:5000/persons?name=jo```
+> irá realizar uma busca por pessoas que possuam 'jo' em seus nomes, ignorando se o texto é maiúsculo ou minúsculo
 
 
 #### [GET] /persons/<person_id>
-Para ver os dados da pessoa de id igual a _person_id_
+> Para ver os dados da pessoa de id igual a _person_id_
 
 #### [POST] /persons
-Para incluir uma nova pessoa
-```
-{
-    "name": "Giovana da Silva",
-    "cpf": "02938128391"
-}
-```
+> Para incluir uma nova pessoa
+> ```
+> {
+>     "name": "Giovana da Silva",
+>     "cpf": "02938128391"
+> }
+> ```
 
 #### [DELETE] /persons/<person_id>
-Para excluir o registro da pessoa de id igual a _person_id_
+> Para excluir o registro da pessoa de id igual a _person_id_
 
 
 ### :books: Subjects (Disciplinas)
 
 #### [GET] /subjects
-Para ver a lista de disciplinas cadastradas
-
-Aceita filtro pelo campo 'name'. Exemplo:
-```[POST] http://localhost:5000/subjects?name=ma```
-irá realizar uma busca por pessoas que possuam 'ma' em seus nomes, ignorando se o texto é maiúsculo ou minúsculo
+> Para ver a lista de disciplinas cadastradas
+> 
+> Aceita filtro pelo campo 'name'. Exemplo:
+> ```[POST] http://localhost:5000/subjects?name=ma```
+> irá realizar uma busca por pessoas que possuam 'ma' em seus nomes, ignorando se o texto é maiúsculo ou minúsculo
 
 
 #### [GET] /subjects/<subject_id>
-Para ver os dados da disciplina de id igual a _subject_id_
+> Para ver os dados da disciplina de id igual a _subject_id_
 
 #### [POST] /subjects
-Para incluir uma nova disciplina
-```
-{
-    "name": "Biologia",
-    "workload": 60,
-    "syllabus": "Ementa da disciplina de Biologia"
-}
-```
+> Para incluir uma nova disciplina
+> ```
+> {
+>     "name": "Biologia",
+>     "workload": 60,
+>     "syllabus": "Ementa da disciplina de Biologia"
+> }
+> ```
 
 #### [DELETE] /subjects/<subject_id>
-Para excluir o registro da disciplina de id igual a _subject_id_
+> Para excluir o registro da disciplina de id igual a _subject_id_
 
 
 ### :student: Students (Estudantes das Disciplinas)
 
 #### [GET] /students
-Para ver a lista de estudantes relacionados às disciplinas
+> Para ver a lista de estudantes relacionados às disciplinas
 
 #### [GET] /students/<student_id>
-Para ver os dados do estudante de id igual a _student_id_
+> Para ver os dados do estudante de id igual a _student_id_
 
 #### [POST] /students
-Para incluir um novo estudante
-```
-{
-    "semester": 4,
-    "final_score": 9.5,
-    "frequency": 88.7,
-    "person_id": 2,
-    "subject_id": 3
-}
-```
+> Para incluir um novo estudante
+> ```
+> {
+>     "semester": 4,
+>     "final_score": 9.5,
+>     "frequency": 88.7,
+>     "person_id": 2,
+>     "subject_id": 3
+> }
+> ```
 
 #### [DELETE] /students/<student_id>
-Para excluir o registro do estudante de id igual a _student_id_
+> Para excluir o registro do estudante de id igual a _student_id_
