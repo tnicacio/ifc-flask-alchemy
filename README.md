@@ -21,6 +21,9 @@ Rodar o arquivo _servidor.py_ utilizando a sua IDE de preferência, ou através 
 
 Após isso, o backend irá rodar na porta 5000.
 
+### Vídeo com o enunciado da atividade, apresentação da implementação e testes
+https://drive.google.com/file/d/1_glqHacKzRGNyvqb6dlQVCGGUBUWGgG8/view?usp=sharing
+
 ## :motorway: Rotas Disponíveis
 
 ### :standing_person: Persons (Pessoas)
