@@ -50,7 +50,6 @@ class PersonTest(unittest.TestCase):
         self.assertTrue(b'Luiza Maria' in response.data)
         self.assertTrue(b'89203928105' in response.data)
 
-    # Check for data returned
     def test_get_persons_should_return_inserted_person(self):
         tester = app.test_client(self)
         send = {'name': 'Maria de Fatima', 'cpf': '12303928105'}
